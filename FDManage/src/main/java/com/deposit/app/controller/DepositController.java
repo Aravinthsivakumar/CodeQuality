@@ -17,6 +17,7 @@ import com.deposit.app.service.DepositService;
 @RestController
 @RequestMapping("/api/deposit")
 public class DepositController {
+	
 	@Autowired
 	DepositService depoditeService;
 	

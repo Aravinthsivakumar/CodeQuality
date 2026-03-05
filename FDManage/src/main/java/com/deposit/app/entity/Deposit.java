@@ -9,47 +9,57 @@ import jakarta.persistence.Id;
 public class Deposit {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer fid;
-	private int amount;
-	private int year;
-	private int interest;
+	private static Integer fid;
 	
+	private static int amount;
+	
+	private static int year;
+	
+	private static int  interest;
 	
 	public Integer getFid() {
 		return fid;
 	}
+	
 	public void setFid(Integer fid) {
-		this.fid = fid;
+		Deposit.fid = fid;
 	}
+	
 	public int getYear() {
 		return year;
 	}
+	
 	public void setYear(int year) {
-		this.year = year;
+		Deposit.year = year;
 	}
+	
 	public int getInterest() {
 		return interest;
 	}
+	
 	public void setInterest(int interest) {
-		this.interest = interest;
+		Deposit.interest = interest;
 	}
 	
 	public Deposit() {
 		super();
 	}
+	
 	public int getAmount() {
 		return amount;
 	}
+	
 	public void setAmount(int amount) {
-		this.amount = amount;
+		Deposit.amount = amount;
 	}
-	public Deposit(Integer fid, int amount, int year, int interest) {
+	
+	public Deposit(int amount, int year, int interest) {
 		super();
-		this.fid = fid;
-		this.amount = amount;
-		this.year = year;
-		this.interest = interest;
+		Deposit.amount = amount;
+		Deposit.year = year;
+		Deposit.interest = interest;
 	}
+	
 	@Override
 	public String toString() {
 		return "Deposit [fid=" + fid + ", amount=" + amount + ", year=" + year + ", interest=" + interest + "]";

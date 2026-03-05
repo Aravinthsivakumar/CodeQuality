@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.deposit.app.service;
 
 
 import java.util.List;
@@ -6,21 +6,21 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.entity.Deposit;
-import com.example.demo.repository.DepositRepository;
+import com.deposit.app.entity.Deposit;
+import com.deposit.app.repository.DepositRepository;
 
 @Service
 public class DepositService {
 	
 	@Autowired
-	DepositRepository repo;
+	DepositRepository depositRepository;
 	
 	public String addAmount(Deposit d){
-		repo.save(d);
+		depositRepository.save(d);
 		return "ok";
 	}
 
 	public List<Deposit> viewAmount() {
-		return repo.findAll();
+		return depositRepository.findAll();
 	}
 }

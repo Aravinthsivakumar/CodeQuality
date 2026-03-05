@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.deposit.app.controller;
 
 
 import java.util.List;
@@ -11,24 +11,24 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.entity.Deposit;
-import com.example.demo.service.DepositService;
+import com.deposit.app.entity.Deposit;
+import com.deposit.app.service.DepositService;
 @CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api/deposit")
 public class DepositController {
 	@Autowired
-	DepositService ds;
+	DepositService depoditeService;
 	
 	@PostMapping
 	public String addAmount(@RequestBody Deposit d){
-		ds.addAmount(d);
+		depoditeService.addAmount(d);
 		return "ok";
 	}
 	
 	@GetMapping
 	public List<Deposit> viewAmount() {
-		return ds.viewAmount();
+		return depoditeService.viewAmount();
 	}
 	
 	

@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.example.demo.entity.Deposit;
+import com.deposit.app.entity.Deposit;
 
 @SpringBootTest
 class FdManageApplicationTests {

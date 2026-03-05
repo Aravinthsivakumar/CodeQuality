@@ -15,11 +15,13 @@ public class DepositService {
 	@Autowired
 	DepositRepository depositRepository;
 	
+	// Getting the value from Deposite repository and add to database
 	public String addAmount(Deposit d){
 		depositRepository.save(d);
 		return "ok";
 	}
-
+	
+	// get the data from database and send to deposite repository
 	public List<Deposit> viewAmount() {
 		return depositRepository.findAll();
 	}
